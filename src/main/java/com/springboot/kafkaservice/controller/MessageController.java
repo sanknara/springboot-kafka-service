@@ -15,7 +15,7 @@ public class MessageController {
     @Autowired
     private KafkaProducer kafkaProducer;
     
-    // http://localhost:8080/api/v1/kafka/publishMessage?message=Open source distributed event streaming platform used by most of the companies for high performance data pipelines, streaming analytics, data integration and mission-critical apps.
+    // http://localhost:8080/api/v1/kafka/publishMessage?message=Hello
     @GetMapping("/publishMessage")
     public ResponseEntity<String> publishMessage(@RequestParam("message") String message){
         kafkaProducer.sendMessage(message);
