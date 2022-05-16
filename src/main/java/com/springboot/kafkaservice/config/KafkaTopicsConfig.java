@@ -12,4 +12,9 @@ public class KafkaTopicsConfig {
         return TopicBuilder.name("understandingApacheKafka")
                 .build();
     }
+    
+    @Bean
+    public NewTopic userDataTopic(){
+        return TopicBuilder.name("userData").build();
+    }
 }
